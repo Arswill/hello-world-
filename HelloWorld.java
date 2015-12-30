@@ -1,6 +1,21 @@
-public calss HelloWorld {
-    public static void main (String[] args) {
-          Sysyem.out.println("Hello world");
-          return ;
-   }
+
+import java.util.*;
+
+public class HelloWorld {
+   public static String randomString(int i) {
+     Random ran = new Random(i);
+     StringBuilder sb = new StringBuilder();
+     while(true) {
+        int k = ran.nextInt(27);
+        if (k == 0 )
+          break;
+        sb.append((char)(64 + k));
+    }
+      return sb.toString();
+  }
+
+   public static void main(String[] args) {
+       System.out.println(randomString(-229985452) + " " + randomString(-147909649));
+    }
+
 }
